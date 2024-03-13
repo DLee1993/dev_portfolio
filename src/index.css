@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-Manrope;
+    }
+
+    /* Fluid font size variables, for browsers that support clamp */
+    @supports (font-size: clamp(1rem, 1vw, 1rem)) {
+        :root {
+            --font-size-sm: clamp(12.8px, 0.04vw + 12.64px, 13.5px);
+            --font-size-base: clamp(16px, 0.12vw + 15.54px, 18px);
+            --font-size-lg: clamp(20px, 0.25vw + 19.08px, 23.99px);
+            --font-size-xl: clamp(25px, 0.43vw + 23.39px, 31.98px);
+            --font-size-2xl: clamp(31.25px, 0.7vw + 28.62px, 42.63px);
+            --font-size-3xl: clamp(39.06px, 1.09vw + 34.96px, 56.83px);
+            --font-size-4xl: clamp(48.83px, 1.66vw + 42.61px, 75.76px);
+            --font-size-5xl: clamp(61.04px, 2.46vw + 51.82px, 100.98px);
+        }
+    }
+    /* Fallback variables for browsers that don't support clamp */
+    @supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+        :root {
+            --font-size-sm: 12.8px;
+            --font-size-base: 16px;
+            --font-size-lg: 20px;
+            --font-size-xl: 25px;
+            --font-size-2xl: 31.25px;
+            --font-size-3xl: 39.06px;
+            --font-size-4xl: 48.83px;
+            --font-size-5xl: 61.04px;
+        }
+        @media screen and (min-width: 2000px) {
+            :root {
+                --font-size-sm: 13.5px;
+                --font-size-base: 18px;
+                --font-size-lg: 23.99px;
+                --font-size-xl: 31.98px;
+                --font-size-2xl: 42.63px;
+                --font-size-3xl: 56.83px;
+                --font-size-4xl: 75.76px;
+                --font-size-5xl: 100.98px;
+            }
+        }
+    }
+}
