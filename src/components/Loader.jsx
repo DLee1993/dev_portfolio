@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { MdCopyright } from "react-icons/md";
 const Loader = () => {
     let container = useRef();
-    const tl = gsap.timeline({ defaults: { ease: "expo", duration: 2 } });
+    const tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 1 } });
 
     useGSAP(
         () => {
@@ -20,29 +20,10 @@ const Loader = () => {
 
             tl.to(["#left", "#right"], {
                 y: 0,
-            })
-                .to("#left", {
-                    y: 50,
-                })
-                .to(
-                    "#right",
-                    {
-                        y: -50,
-                    },
-                    "<"
-                )
-                .to(
-                    container.current,
-                    {
-                        opacity: 0,
-                        duration: 1,
-                        pointerEvents: "none",
-                    },
-                    "<"
-                )
-                .to(container.current, {
-                    y: "-100%",
-                });
+            }).to(container.current, {
+                y: "-100%",
+                delay: 0.5,
+            });
         },
         { scope: container }
     );
