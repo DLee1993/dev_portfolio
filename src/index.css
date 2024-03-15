@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply font-Manrope;
+        @apply font-Manrope bg-csBlack text-csWhite;
     }
 
     /* Fluid font size variables, for browsers that support clamp */
