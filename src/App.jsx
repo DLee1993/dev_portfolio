@@ -2,13 +2,13 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import SelectedWorks from "./components/SelectedWorks";
 import Contact from "./components/Contact";
-import Menu from "./components/Menu";
+import { useState } from "react";
 function App() {
+    const [menu, setMenu] = useState(false);
     return (
         <>
-            <Menu />
-            <Header />
-            <main>
+            <Header setMenu={setMenu} menu={menu} />
+            <main className="h-[200vh]">
                 <Hero />
                 <SelectedWorks />
             </main>

@@ -7,6 +7,14 @@
         @apply font-Manrope bg-csBlack text-csWhite;
     }
 
+    body::-webkit-scrollbar {
+        @apply bg-transparent w-2;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        @apply bg-csWhite w-1 rounded-sm;
+    }
+
     /* Fluid font size variables, for browsers that support clamp */
     @supports (font-size: clamp(1rem, 1vw, 1rem)) {
         :root {
@@ -44,5 +52,11 @@
                 --font-size-5xl: 100.98px;
             }
         }
+    }
+}
+
+@layer components {
+    .componentXPadding {
+        @apply px-10;
     }
 }
