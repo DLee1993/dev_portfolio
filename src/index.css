@@ -60,7 +60,13 @@
         @apply px-5 sm:px-7 md:px-9;
     }
 
-    .menuHoverEffect {
-        @apply hover:scale-110 motion-safe:transition-transform duration-1000;
+    #pageLinks {
+        @apply text-csBlack md:text-csWhite lg:text-csBlack font-medium capitalize space-y-3;
+    }
+    #menuListTitle {
+        @apply text-sm capitalize text-csGrey;
+    }
+    #menuHoverEffect {
+        @apply hover:scale-110 motion-safe:transition-transform duration-1000 overflow-hidden;
     }
 }
