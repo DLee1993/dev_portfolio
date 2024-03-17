@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply font-Manrope bg-csBlack text-csWhite;
+        @apply font-Manrope bg-csBlack text-csWhite text-base;
     }
 
     body::-webkit-scrollbar {
@@ -57,6 +57,10 @@
 
 @layer components {
     .componentXPadding {
-        @apply px-10;
+        @apply px-5 sm:px-7 md:px-9;
+    }
+
+    .menuHoverEffect {
+        @apply hover:scale-110 focus-within:scale-110 motion-safe:transition-transform duration-1000;
     }
 }

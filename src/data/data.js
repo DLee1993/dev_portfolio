@@ -1,3 +1,5 @@
+import Resume from "/assets/Resume.docx";
+
 export const projects = [
     {
         title: "Final Frontier",
@@ -55,5 +57,47 @@ export const components = [
         title: "Galleria",
         repo: "https://www.github.com",
         image: "assets/vincentas-liskauskas-TPhZnl2NEws-unsplash 1.webp",
+    },
+];
+
+export const links = [
+    {
+        linkName: "selected works",
+        linkHref: "#selectedworks",
+        download: false,
+    },
+    {
+        linkName: "about the dev",
+        linkHref: "#aboutme",
+        download: false,
+    },
+    {
+        linkName: "resume",
+        linkHref: Resume,
+        download: true,
+    },
+    {
+        linkName: "start a conversation",
+        linkHref: "#contactme",
+        download: false,
+    },
+];
+
+export const projectLiveSiteLinks = [
+    {
+        linkName: "Final Frontier",
+        linkHref: "#selectedworks",
+    },
+    {
+        linkName: "Wordup",
+        linkHref: "#aboutme",
+    },
+    {
+        linkName: "Galleria",
+        linkHref: "#link",
+    },
+    {
+        linkName: "Noted",
+        linkHref: "#contactme",
     },
 ];
