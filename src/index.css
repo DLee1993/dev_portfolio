@@ -61,6 +61,6 @@
     }
 
     .menuHoverEffect {
-        @apply hover:scale-110 focus-within:scale-110 motion-safe:transition-transform duration-1000;
+        @apply hover:scale-110 motion-safe:transition-transform duration-1000;
     }
 }

@@ -65,21 +65,25 @@ export const links = [
         linkName: "selected works",
         linkHref: "#selectedworks",
         download: false,
+        scrollable: true,
     },
     {
         linkName: "about the dev",
         linkHref: "#aboutme",
         download: false,
+        scrollable: true,
     },
     {
         linkName: "resume",
         linkHref: Resume,
         download: true,
+        scrollable: false,
     },
     {
         linkName: "start a conversation",
         linkHref: "#contactme",
         download: false,
+        scrollable: true,
     },
 ];
 
