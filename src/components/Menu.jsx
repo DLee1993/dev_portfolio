@@ -8,39 +8,42 @@ const Menu = ({ setMenuOpen }) => {
     const menu = useRef();
     const menuTL = gsap.timeline({ paused: true });
 
-    useGSAP(() => {
-        gsap.set(menu.current, {
-            opacity: 0,
-            pointerEvents: "none",
-        });
+    useGSAP(
+        () => {
+            gsap.set(menu.current, {
+                opacity: 0,
+                pointerEvents: "none",
+            });
 
-        gsap.set(".menuLink", {
-            y: "100%",
-        });
+            gsap.set(".menuLink", {
+                y: "100%",
+            });
 
-        menuTL
-            .to(menu.current, {
-                opacity: 1,
-                pointerEvents: "all",
-                ease: "power4.inOut",
-            })
-            .to(
-                ".menuLink",
-                {
-                    y: 0,
-                },
-                "-=0.2"
-            )
-            .reverse();
+            menuTL
+                .to(menu.current, {
+                    opacity: 1,
+                    pointerEvents: "all",
+                    ease: "power4.inOut",
+                })
+                .to(
+                    ".menuLink",
+                    {
+                        y: 0,
+                    },
+                    "-=0.2"
+                )
+                .reverse();
 
-        document.getElementById("menuBtn").addEventListener("click", toggleMenu);
+            document.getElementById("menuBtn").addEventListener("click", toggleMenu);
 
-        document
-            .querySelectorAll("#pageLinks li a")
-            .forEach((link) => link.addEventListener("click", closeMenu));
+            document
+                .querySelectorAll("#pageLinks li a")
+                .forEach((link) => link.addEventListener("click", closeMenu));
 
-        document.getElementById("logoText").addEventListener("click", closeMenu);
-    });
+            document.getElementById("logoText").addEventListener("click", closeMenu);
+        },
+        { scope: menu }
+    );
 
     const toggleMenu = () => {
         menuTL.reversed() ? menuTL.play() : menuTL.reverse();
@@ -53,11 +56,7 @@ const Menu = ({ setMenuOpen }) => {
     };
 
     return (
-        <section
-            id="menu"
-            ref={menu}
-            className="fixed top-0 left-0 z-40 flex w-screen h-screen"
-        >
+        <section id="menu" ref={menu} className="fixed top-0 left-0 z-40 flex w-screen h-screen">
             <section className="w-full lg:w-3/4 min-h-screen pt-10 sm:pt-0 flex justify-between items-center bg-csWhite componentPadding">
                 <aside className="hidden md:flex justify-center items-center w-full lg:w-3/5">
                     {hoverImage !== "" && (

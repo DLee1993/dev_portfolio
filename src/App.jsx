@@ -1,27 +1,22 @@
 import { useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import Menu from "./components/Menu";
+import Header from "./components/Header";
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
     const [menuOpen, setMenuOpen] = useState(false);
-
     return (
         <>
-            <header className="sticky top-0 z-50 min-h-20 flex justify-between items-center mix-blend-difference componentXPadding">
-                <a href="/" className="uppercase font-bold" id="logoText">
-                    david lee
-                </a>
-                <button
-                    id="menuBtn"
-                    className={menuOpen ? "active" : ""}
-                    aria-label="open menu"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                >
-                    <div className="line"></div>
-                    <div className="circle"></div>
-                    <div className="line"></div>
-                </button>
-            </header>
-            <main className="h-[200vh]">main</main>
+            <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <main>
+                <section>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iure facilis
+                    exercitationem nam similique ipsam ab quibusdam! Deleniti ratione corrupti,
+                    tempore cum, unde voluptate ex aperiam aut autem a repellat.
+                </section>
+            </main>
             <footer id="aboutme">footer</footer>
             <Menu setMenuOpen={setMenuOpen} />
         </>

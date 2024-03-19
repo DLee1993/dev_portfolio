@@ -19,6 +19,12 @@
         @apply bg-csWhite w-1 rounded-sm;
     }
 
+    header,
+    main,
+    footer {
+        @apply px-5 sm:px-7 md:px-9;
+    }
+
     /* Fluid font size variables, for browsers that support clamp */
     @supports (font-size: clamp(1rem, 1vw, 1rem)) {
         :root {
@@ -92,5 +98,19 @@
 
     #menuBtn.active .circle {
         @apply scale-100 border-csAccent;
+    }
+
+    #textReveal {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
     }
 }
