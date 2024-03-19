@@ -58,7 +58,7 @@ const Menu = ({ setMenuOpen }) => {
             ref={menu}
             className="fixed top-0 left-0 z-40 flex w-screen h-screen"
         >
-            <section className="w-full lg:w-3/4 min-h-screen pt-20 sm:pt-0 flex justify-between items-center bg-csWhite componentPadding">
+            <section className="w-full lg:w-3/4 min-h-screen pt-10 sm:pt-0 flex justify-between items-center bg-csWhite componentPadding">
                 <aside className="hidden md:flex justify-center items-center w-full lg:w-3/5">
                     {hoverImage !== "" && (
                         <figure className="absolute h-96 p-10 bg-csGrey/10">

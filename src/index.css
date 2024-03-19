@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    html {
+        -webkit-tap-highlight-color: hsl(40, 78, 61);
+    }
+
     body {
         @apply font-Manrope bg-csBlack text-csWhite text-base;
     }
