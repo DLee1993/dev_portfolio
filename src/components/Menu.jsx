@@ -3,10 +3,7 @@ import PropTypes from "prop-types";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { links, projects } from "../data/data";
-import { useLenis } from "@studio-freight/react-lenis";
-
 const Menu = ({ setMenuOpen }) => {
-    const lenis = useLenis();
     const [hoverImage, setHoverImage] = useState("");
     const menu = useRef();
     const menuTL = gsap.timeline({ paused: true });
@@ -55,14 +52,13 @@ const Menu = ({ setMenuOpen }) => {
         menuTL.reverse();
     };
 
-    const scrollTo = (e, link) => {
-        e.preventDefault();
-        lenis.scrollTo(link);
-    };
-
     return (
-        <section id="menu" ref={menu} className="fixed top-0 left-0 z-40 flex w-screen h-screen">
-            <section className="w-full lg:w-3/4 flex justify-between items-center bg-csWhite componentPadding">
+        <section
+            id="menu"
+            ref={menu}
+            className="fixed top-0 left-0 z-40 flex w-screen h-screen"
+        >
+            <section className="w-full lg:w-3/4 min-h-screen pt-20 sm:pt-0 flex justify-between items-center bg-csWhite componentPadding">
                 <aside className="hidden md:flex justify-center items-center w-full lg:w-3/5">
                     {hoverImage !== "" && (
                         <figure className="absolute h-96 p-10 bg-csGrey/10">
@@ -78,7 +74,7 @@ const Menu = ({ setMenuOpen }) => {
                 </aside>
                 <aside
                     id="menuLinks"
-                    className="w-full md:w-3/5 lg:w-2/5 h-full lg:h-auto flex flex-col justify-center items-start space-y-12 border-l-[2px] lg:border-csGrey text-xl md:text-lg md:bg-csBlack lg:bg-transparent componentXPadding"
+                    className="w-full md:w-3/5 lg:w-2/5 h-full lg:h-auto flex flex-col justify-center items-start space-y-12 border-l-[2px] lg:border-csGrey text-2xl md:text-lg md:bg-csBlack lg:bg-transparent componentXPadding"
                 >
                     <ul id="pageLinks">
                         <li id="menuListTitle">sitemap</li>
@@ -87,9 +83,6 @@ const Menu = ({ setMenuOpen }) => {
                                 <a
                                     href={link.linkHref}
                                     download={link.download}
-                                    onClick={(e) => {
-                                        link.scrollable && scrollTo(e, link.linkHref);
-                                    }}
                                     className="block menuLink"
                                 >
                                     {link.linkName}
