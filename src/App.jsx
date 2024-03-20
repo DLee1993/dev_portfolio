@@ -10,7 +10,7 @@ function App() {
     return (
         <>
             <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <main className="h-[200vh] pt-20">
+            <main className="h-[200vh]">
                 <Hero />
                 <SelectedWorks />
             </main>

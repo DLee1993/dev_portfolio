@@ -73,7 +73,7 @@ const Menu = ({ setMenuOpen }) => {
                 </aside>
                 <aside
                     id="menuLinks"
-                    className="w-full md:w-3/5 lg:w-2/5 h-full lg:h-auto flex flex-col justify-center items-start space-y-12 border-l-[2px] lg:border-csGrey text-2xl md:text-lg md:bg-csBlack lg:bg-transparent componentXPadding"
+                    className="w-full md:w-3/5 lg:w-2/5 h-full lg:h-auto flex flex-col justify-center items-start space-y-12 border-l-[2px] lg:border-csGrey text-lg md:bg-csBlack lg:bg-transparent componentXPadding"
                 >
                     <ul id="pageLinks">
                         <li id="menuListTitle">sitemap</li>
@@ -119,6 +119,7 @@ const Menu = ({ setMenuOpen }) => {
 
 Menu.propTypes = {
     setMenuOpen: PropTypes.func,
+    openMenu: PropTypes.bool,
 };
 
 export default Menu;
