@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const Header = ({ menuOpen, setMenuOpen }) => {
     return (
-        <header className="fixed top-0 z-50 w-full min-h-20 flex justify-between items-center mix-blend-difference">
+        <header className="fixed top-0 z-50 w-full min-h-20 flex justify-between items-center">
             <a href="/" className="uppercase font-bold" id="logoText">
                 david lee
             </a>

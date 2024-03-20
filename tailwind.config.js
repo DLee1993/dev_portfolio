@@ -22,6 +22,9 @@ export default {
                 "4xl": "var(--font-size-4xl)",
                 "5xl": "var(--font-size-5xl)",
             },
+            backgroundImage: {
+                "menu-bg": "url('/assets/menu-bg.png')",
+            },
         },
     },
     plugins: [],

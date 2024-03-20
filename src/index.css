@@ -71,7 +71,7 @@
     }
 
     #pageLinks {
-        @apply text-csBlack md:text-csWhite lg:text-csBlack font-medium capitalize space-y-3;
+        @apply font-medium capitalize space-y-3;
     }
     #menuListTitle {
         @apply text-sm capitalize text-csGrey;
@@ -98,13 +98,5 @@
 
     #menuBtn.active .circle {
         @apply scale-100 border-csAccent;
-    }
-
-    .white {
-        @apply bg-csWhite text-csBlack;
-    }
-
-    .black {
-        @apply bg-csBlack text-csWhite;
     }
 }
