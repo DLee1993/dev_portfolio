@@ -1,23 +1,20 @@
 import { useState } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import Menu from "./components/Menu";
 import Header from "./components/Header";
-gsap.registerPlugin(ScrollTrigger);
+import Hero from "./components/Hero";
+import SelectedWorks from "./components/SelectedWorks";
+import Footer from "./components/Footer";
 
 function App() {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
         <>
             <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <main>
-                <section>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iure facilis
-                    exercitationem nam similique ipsam ab quibusdam! Deleniti ratione corrupti,
-                    tempore cum, unde voluptate ex aperiam aut autem a repellat.
-                </section>
+            <main className="h-[200vh] pt-20">
+                <Hero />
+                <SelectedWorks />
             </main>
-            <footer id="aboutme">footer</footer>
+            <Footer />
             <Menu setMenuOpen={setMenuOpen} />
         </>
     );

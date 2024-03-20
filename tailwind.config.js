@@ -4,8 +4,8 @@ export default {
     theme: {
         extend: {
             colors: {
-                csBlack: "hsl(45,6,13)",
-                csWhite: "hsl(0,0,88)",
+                csBlack: "hsl(0, 0%, 5%)",
+                csWhite: "hsl(0, 0%, 94%)",
                 csGrey: "hsl(0,0,65)",
                 csAccent: "hsl(40,78,61)",
             },
